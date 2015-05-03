@@ -5,6 +5,7 @@ AudioScanner
 
 This is a rough visualization for a student project @FH-Potsdam  
 
+![](screenshot.png)  
 ##License  
 
 Copyright (c)  2015 Fabian "fabiantheblind" Morón Zirfas  
