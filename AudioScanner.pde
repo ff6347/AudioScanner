@@ -3,7 +3,7 @@
 //These are unused but got to have if you want to see the 
 //simple code where it comes from in the draw
 //int x = 0;
-//int step = 100;
+int step = 100;
 //int radius = 300;
 //float off = .0;
 
