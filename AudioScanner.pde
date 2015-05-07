@@ -14,7 +14,8 @@ ScannPoint another_scanner;
 ArrayList <ScannPoint> scanns;
 
 void setup() {
-  size(800, 800);
+  
+  size(800, 800,OPENGL);
   colorMode(HSB, 360, 100, 100); // because HSB is cooler
   scanns = new ArrayList<ScannPoint>(); // init the list
 
@@ -26,16 +27,16 @@ void setup() {
   // amount is the amount the ellipse can differ from its orbit
   // x is the starting point of the ellipse
 
-  scanner = new ScannPoint(300, color(162, 90, 90), 5, 100, 90);
-  another_scanner = new ScannPoint(305, color(162, 90, 90), 5, 100, 90);
+  scanner = new ScannPoint(300, color(260, 90, 90), 5, 100, 90);
+  another_scanner = new ScannPoint(305, color(360, 90, 90), 5, 100, 90);
   
   // fill the list with new scan points
   for(int i = 100; i < 300; i+=5){
-    scanns.add(new ScannPoint(i, color(160, 90, 90), 5, 10, 90));
+    scanns.add(new ScannPoint(i, color(160, 90, 90), 5, random(10,100), random(360)));
   }
 }
 void draw() {
-
+smooth();
   bg_and_ranges(); // clear the bg and draw the circles
   for(int i = 0; i < scanns.size();i++){
     scanns.get(i).run();
